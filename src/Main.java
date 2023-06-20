@@ -1,15 +1,13 @@
-import java.util.ArrayList;
-import java.util.Collection;
-import java.util.Collections;
-import java.util.List;
+import java.util.*;
 
 public class Main {
     public static void main(String[] args) {
         System.out.println("Hello world!");
         task1();
         task2();
+        task3();
+        task4();
     }
-
 
 
     public static void task1() {
@@ -54,5 +52,35 @@ public class Main {
                 previousNumber = num;
             }
         }
+    }
+
+    public static void task3() {
+        System.out.println("Задача 3");
+
+
+//   Напишите код, который выводит в консоль все уникальные слова из списка слов, в котором могут встречаться дубли.
+//   Код должен работать с любой последовательностью и объемом списка слов.
+//
+//   В качестве отладочной информации возьмите произвольный набор слов или текст, в котором встречаются повторения.
+//   List<String> strings = new ArrayList<>(List.of("один", "два","два", "три", "три", "три"));
+
+        List<String> strings = new ArrayList<>(List.of("один", "два","два", "три", "три", "три"));
+        Set<String> uniqueWords = new HashSet<>(strings);
+        System.out.println(uniqueWords);
+    }
+
+    public static void task4() {
+        System.out.println("Задача 4");
+
+
+//   Напишите код, который выводит в консоль количество дублей для каждого уникального слова.
+//   Код должен работать с любой последовательностью и объемом списка слов.
+//
+//   В качестве отладочной информации используйте:
+//   List<String> strings = new ArrayList<>(List.of("один", "два","два", "три", "три", "три"));
+
+        List<String> strings = new ArrayList<>(List.of("один", "два","два", "три", "три", "три"));
+        Set<String> uniqueWords = new HashSet<>(strings);
+        System.out.println(strings.size() - uniqueWords.size());
     }
 }
